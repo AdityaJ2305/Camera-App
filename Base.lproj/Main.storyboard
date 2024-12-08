@@ -16,19 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-MG-HpT" customClass="Designable" customModule="Camera_App2" customModuleProvider="target">
-                                <rect key="frame" x="16" y="59" width="361" height="678"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-MG-HpT" customClass="Designable" customModule="Camera_App2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="59" width="353" height="702.33333333333337"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="60"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZS-Bv-gDp">
-                                <rect key="frame" x="28" y="751" width="137" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZS-Bv-gDp">
+                                <rect key="frame" x="20" y="778.33333333333337" width="137.33333333333334" height="34.666666666666629"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Capture">
                                     <backgroundConfiguration key="background" cornerRadius="45"/>
@@ -37,9 +35,8 @@
                                     <action selector="didTapedCaptureButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6d-Yl-8VP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqJ-61-7io">
-                                <rect key="frame" x="231" y="751" width="146" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqJ-61-7io">
+                                <rect key="frame" x="236.66666666666663" y="778.66666666666663" width="136.33333333333337" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Take to Gallery">
                                     <backgroundConfiguration key="background" cornerRadius="45"/>
@@ -51,6 +48,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kqJ-61-7io" firstAttribute="top" secondItem="tV1-MG-HpT" secondAttribute="bottom" constant="17.329999999999998" id="6DZ-gZ-aCw"/>
+                            <constraint firstItem="wZS-Bv-gDp" firstAttribute="top" secondItem="tV1-MG-HpT" secondAttribute="bottom" constant="17" id="ANJ-2N-isU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tV1-MG-HpT" secondAttribute="trailing" constant="20" id="GY7-fl-xL9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kqJ-61-7io" secondAttribute="bottom" constant="5" id="Hd2-Oa-Uh7"/>
+                            <constraint firstItem="tV1-MG-HpT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lte-T9-xoZ"/>
+                            <constraint firstItem="tV1-MG-HpT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mg4-PU-6pg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kqJ-61-7io" secondAttribute="trailing" constant="20" id="bnP-3n-hb6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wZS-Bv-gDp" secondAttribute="bottom" constant="5" id="scf-iH-s22"/>
+                            <constraint firstItem="wZS-Bv-gDp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vOv-Wh-NmL"/>
+                            <constraint firstItem="wZS-Bv-gDp" firstAttribute="width" secondItem="kqJ-61-7io" secondAttribute="width" multiplier="1.0069" id="yQc-Dz-1ib"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="wZS-Bv-gDp" id="H57-rv-3Q7"/>
@@ -64,8 +73,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
